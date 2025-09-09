@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 from PIL import Image
 from flask import send_file
-
+from threading import Timer
+import webbrowser
 import os
 
 app = Flask(__name__)
